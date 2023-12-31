@@ -47,6 +47,7 @@ namespace TestClientAsyncUWP
 
         private async void btnWebAPICall_Click(object sender, RoutedEventArgs e)
         {
+            //
             HttpClient httpClient = new HttpClient();
             HttpResponseMessage httpResponseMessage = await httpClient.GetAsync("http://localhost:8540/TestLongOperation");
             string result = await httpResponseMessage.Content.ReadAsStringAsync();
